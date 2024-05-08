@@ -30,11 +30,19 @@ echo $root;
 //$usuario->insert();
 //echo $usuario;
 
+//alterar um usuario
+
+/*
+$usuario = new Usuarios();
+$usuario->loadById(9);
+$usuario->update("professor", "$%%#44");
+echo $usuario;*/
+
 $usuario = new Usuarios();
 
-$usuario->loadById(9);
+$usuario->loadById(7);
 
-$usuario->update("professor", "$%%#44");
+$usuario->delete();
 
 echo $usuario;
 ?>
