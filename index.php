@@ -40,7 +40,7 @@ echo $usuario;*/
 
 $usuario = new Usuarios();
 
-$usuario->loadById(7);
+$usuario->loadById(6);
 
 $usuario->delete();
 

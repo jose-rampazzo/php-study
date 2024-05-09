@@ -1,12 +1,12 @@
 <?php
 
-class SQL extends PDO {
+class SQL_SERVER extends PDO {
 
     private $conection;
 
-    public  function __construct(){
+    public function __construct(){
 
-        $this->conection = new PDO("mysql:host=localhost;dbname=dbphp", "root", "");
+        $this->conection = new PDO("sqlsrv:Database=user_data;server=localhost;ConnectionPooling=0", "USER", "SENHA");
 
     }
 
@@ -23,7 +23,7 @@ class SQL extends PDO {
     private function setParam($statement, $key, $value){
 
         $statement->bindParam($key, $value);
-
+    
     }
 
     public function execQuery($rawQuery, $params = array()){
@@ -38,7 +38,7 @@ class SQL extends PDO {
 
     }
 
-    public function select($rawQuery,  $params = array()):array{
+    public function select($rawQuery, $params = array()):array{
 
         $stmt = $this->execQuery($rawQuery, $params);
 
@@ -47,6 +47,5 @@ class SQL extends PDO {
     }
 
 }
-
 
 ?>
