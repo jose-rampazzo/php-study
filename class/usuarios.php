@@ -88,7 +88,7 @@ class Usuarios {
         }
 
         else{
-             throw new Exception("Login e/ou senha inválidos.");
+             throw new Exception("Login ou senha inválidos.");
             }
 
     }

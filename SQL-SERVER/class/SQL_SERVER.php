@@ -6,7 +6,7 @@ class SQL_SERVER extends PDO {
 
     public function __construct(){
 
-        $this->conection = new PDO("sqlsrv:Database=user_data;server=localhost;ConnectionPooling=0", "USER", "SENHA");
+        $this->conection = new PDO("sqlsrv:Database=user_data;server=localhost;ConnectionPooling=0", "sa", "Luffy19@jh");
 
     }
 
