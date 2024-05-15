@@ -87,7 +87,21 @@ class USERS {
 
     }
 
-    
+    public function insertTwo($login="", $password="", $access_level=""){
+
+        $this->setUser_login($login);
+        $this->setUser_password($password);
+        $this->setAccess_level($access_level);
+
+        $sql = new SQL_SERVER();
+
+        $sql->execQuery("EXEC create_user_5 :LOGIN, :PASSWORD, :ACCESS", array(
+            ':LOGIN'=>$this->getUser_login(),
+            ':PASSWORD'=>$this->getUser_password(),
+            ':ACCESS'=>$this->getAccess_level()
+        ));
+    }
+
 
     public function update($login="", $password="", $access_level=""){
 

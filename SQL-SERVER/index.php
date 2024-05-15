@@ -11,9 +11,8 @@ echo $root;
 */
 
 //Inserir um novo usuário no banco
-
-$usuario = new USERS("gama", "Shido34k", "MOD");
-$usuario->insert();
+//$usuario = new USERS();
+//$usuario->insertTwo("professor", "$%%#44", "MOD");
 
 
 //Lista o user da tabela
@@ -33,12 +32,12 @@ echo $user;
 */
 
 //Deleta um usuário de acordo com o ID
-/*
+
 $user_del = new USERS();
-$user_del->loadById(15);
+$user_del->loadById(16);
 $user_del->delete();
 echo $user_del;
-*/
+
 
 //Load a user using this login and password
 //$user = new USERS();
