@@ -30,7 +30,7 @@ class cep {
         }
 
         elseif (isset($data[$info]) && $data !="") {
-        echo json_encode([$info => $data[$info]], JSON_UNESCAPED_UNICODE); // cria um novo JSON contendo apenas o par chave-valor desejado e imprime este JSON.
+        echo json_encode([$info => $data[$info]], JSON_UNESCAPED_UNICODE); // cria um novo JSON contendo somente a chave/valor e imprime em formato JSON.
             }
 
         else {
